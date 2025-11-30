@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Refund Policy — BuySahi</title>
+  <meta name="description" content="Refund policy for BuySahi - affiliate product recommendations." />
+  <style>
+    :root{--bg:#0b0b0b;--card:rgba(255,255,255,0.04);--muted:rgba(255,255,255,0.7);--accent:#fff}
+    *{box-sizing:border-box;margin:0;padding:0;font-family:Inter,Poppins,system-ui,Arial,sans-serif}
+    body{background:var(--bg);color:#fff;padding:24px}
+    .wrap{max-width:920px;margin:28px auto;padding:26px;background:var(--card);border-radius:12px;border:1px solid rgba(255,255,255,0.04);backdrop-filter:blur(6px)}
+    header{display:flex;gap:12px;align-items:center;margin-bottom:18px}
+    header img{height:38px}
+    h1{font-size:1.5rem;margin-bottom:6px}
+    h2{margin-top:18px;margin-bottom:8px;font-size:1.05rem}
+    p{color:var(--muted);margin-bottom:10px}
+    ul{margin-left:18px;margin-bottom:10px}
+    footer{margin-top:20px;text-align:center;color:var(--muted);font-size:0.9rem;padding-top:12px;border-top:1px solid rgba(255,255,255,0.03)}
+    a{color:var(--accent);text-decoration:underline}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a href="index.html" aria-label="BuySahi Home">
+        <img src="https://github.com/buysahi/buysahi.github.io/raw/main/Black_and_White_Modern_Streetwear_Sport_Logo__1_-removebg-preview-2.png" alt="BuySahi logo">
+      </a>
+    </header>
+
+    <h1>Refund Policy</h1>
+    <p class="small">Last updated: November 30, 2025</p>
+
+    <p>BuySahi does not sell products directly. All purchases made through BuySahi are completed on Amazon or other third-party seller sites. As such, BuySahi does not handle refunds, returns, cancellations, or shipping issues.</p>
+
+    <h2>1. Refunds &amp; Returns</h2>
+    <p>All refunds, returns, and exchanges must be processed according to the seller’s policy — in most cases this is Amazon's Returns &amp; Refunds policy. Please visit Amazon’s help pages from your Amazon orders page for details.</p>
+
+    <h2>2. Damaged or Incorrect Items</h2>
+    <p>If you receive a damaged or incorrect item, please contact Amazon Customer Support through your orders page. BuySahi cannot accept returns or process refunds directly.</p>
+
+    <h2>3. Order Cancellations</h2>
+    <p>Order cancellations must be made on Amazon. BuySahi cannot cancel orders.</p>
+
+    <h2>4. Affiliate Commission</h2>
+    <p>Returned or refunded purchases may result in cancellation of affiliate commission. This does not affect your compensation or refund process with the seller.</p>
+
+    <h2>5. Questions</h2>
+    <p>If you have questions about information shown on BuySahi, contact us at <a href="mailto:support@buysahi.in">support@buysahi.in</a>.</p>
+
+    <footer>
+      <p>As an Amazon Associate, I earn from qualifying purchases.</p>
+      <p>&copy; BuySahi — <span id="year2"></span></p>
+    </footer>
+  </div>
+
+  <script>document.getElementById('year2').innerText = new Date().getFullYear();</script>
+</body>
+</html>
