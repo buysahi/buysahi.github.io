@@ -1,23 +1,43 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <!-- BASIC -->
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
   <title>BuySahi – Smart Amazon Finds for Indian Homes</title>
   <meta name="description" content="BuySahi curates smart, problem-solving Amazon products for Indian homes. No clutter. No spam. Just useful finds.">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="styles.css">
-
   <!-- SEO -->
   <link rel="canonical" href="https://buysahi.github.io/">
+  <meta name="robots" content="index, follow">
+
+  <!-- SOCIAL (optional but pro) -->
+  <meta property="og:title" content="BuySahi – Smart Amazon Finds">
+  <meta property="og:description" content="Handpicked Amazon products that solve real problems in Indian homes.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://buysahi.github.io/">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+  <!-- SCHEMA -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "BuySahi",
+    "url": "https://buysahi.github.io/",
+    "logo": "https://github.com/buysahi/buysahi.github.io/raw/main/Black_and_White_Modern_Streetwear_Sport_Logo__1_-removebg-preview-2.png"
+  }
+  </script>
 </head>
 
 <body>
 
-<!-- BACKGROUND VIDEO -->
-<video autoplay muted loop playsinline id="bgVideo">
+<!-- BACKGROUND VIDEO (DESKTOP ONLY VIA CSS) -->
+<video autoplay muted loop playsinline id="bgVideo" aria-hidden="true" preload="metadata">
   <source src="https://v1.pinimg.com/videos/iht/expMp4/b8/ce/bd/b8cebd36cc32a9897a2306d2e8e2ed1d_720w.mp4" type="video/mp4">
 </video>
 
@@ -34,18 +54,19 @@
 <!-- SEARCH -->
 <section class="search-wrap">
   <input
-    type="text"
+    type="search"
     id="searchInput"
-    placeholder="Search products by code or name…"
-    autocomplete="off">
+    placeholder="Search products by name or code…"
+    autocomplete="off"
+    aria-label="Search products">
   <div id="suggestionsBox"></div>
 </section>
 
 <!-- HERO -->
 <section class="hero">
-  <h1>Smart Amazon Finds<br>for Everyday Problems</h1>
+  <h1>Smart Buysahi Finds<br>for Everyday Problems</h1>
   <p class="sub">
-    We curate only useful, problem-solving products for Indian homes.
+    Handpicked, problem-solving products for Indian homes.
     No spam. No fake deals.
   </p>
 
@@ -54,71 +75,24 @@
   </a>
 </section>
 
-<!-- TRUST STRIP -->
+<!-- TRUST -->
 <section class="trust-strip">
   <div>✔ Handpicked Products</div>
   <div>✔ Indian Home Focus</div>
   <div>✔ No Sponsored Rankings</div>
 </section>
 
-<!-- CATEGORY QUICK NAV -->
+<!-- QUICK NAV -->
 <section class="chip-row">
   <button class="chip" onclick="scrollToSection('trending')">🔥 Trending</button>
-  <button class="chip" onclick="scrollToSection('problem')">🧩 Problem-Solving</button>
-  <button class="chip" onclick="scrollToSection('organisers')">🏠 Home Organisers</button>
-  <button class="chip" onclick="scrollToSection('insta')">📸 Insta Trends</button>
+  <button class="chip" onclick="scrollToSection('problemsolving')">🧩 Problem-Solving</button>
+  <button class="chip" onclick="scrollToSection('homeorganisers')">🏠 Organisers</button>
+  <button class="chip" onclick="scrollToSection('instatrends')">📸 Insta Trends</button>
   <button class="chip" onclick="scrollToSection('kitchen')">🍳 Kitchen</button>
 </section>
 
-<!-- CONTENT -->
-<main id="dynamicCarousels">
-
-  <!-- TRENDING -->
-  <section class="carousel-section" id="trending">
-    <h2>🔥 Trending Right Now</h2>
-    <div class="swiper">
-      <div class="swiper-wrapper" id="trendingWrapper"></div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </section>
-
-  <!-- PROBLEM SOLVING -->
-  <section class="carousel-section" id="problem">
-    <h2>🧩 Solves Daily Problems</h2>
-    <div class="swiper">
-      <div class="swiper-wrapper" id="problemWrapper"></div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </section>
-
-  <!-- HOME ORGANISERS -->
-  <section class="carousel-section" id="organisers">
-    <h2>🏠 Home Organisers People Love</h2>
-    <div class="swiper">
-      <div class="swiper-wrapper" id="organiserWrapper"></div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </section>
-
-  <!-- INSTA -->
-  <section class="carousel-section" id="insta">
-    <h2>📸 Viral on Instagram</h2>
-    <div class="swiper">
-      <div class="swiper-wrapper" id="instaWrapper"></div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </section>
-
-  <!-- KITCHEN -->
-  <section class="carousel-section" id="kitchen">
-    <h2>🍳 Kitchen Bestsellers</h2>
-    <div class="swiper">
-      <div class="swiper-wrapper" id="kitchenWrapper"></div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </section>
-
-</main>
+<!-- DYNAMIC CONTENT -->
+<main id="dynamicCarousels"></main>
 
 <!-- BROWSE ALL -->
 <section class="browse-all">
@@ -144,8 +118,8 @@
     <a href="/blog/">Blog</a>
     <a href="/all.html">All Products</a>
     <a href="/about.html">About</a>
-    <a href="/privacy.html">Privacy</a>
-    <a href="/terms.html">Terms</a>
+    <a href="/privacy.html" rel="nofollow">Privacy</a>
+    <a href="/terms.html" rel="nofollow">Terms</a>
   </nav>
 
   <p class="footer-copy">
@@ -153,16 +127,17 @@
   </p>
 </footer>
 
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
+
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
-
-  function scrollToSection(id) {
+  function scrollToSection(id){
     const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
+    if(el) el.scrollIntoView({behavior:"smooth"});
   }
 </script>
-
-<script src="script.js"></script>
 
 </body>
 </html>
