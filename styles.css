@@ -74,30 +74,23 @@ body{
   width:100%;
   padding:14px 20px;
   border-radius:999px;
-  border:1px solid var(--border);
-  background:var(--glass);
+  border:1px solid rgba(255,255,255,0.15);
+  background:rgba(255,255,255,0.08);
   color:#fff;
   font-size:1rem;
   outline:none;
-  backdrop-filter:blur(10px);
 }
 
-.search-wrap input::placeholder{
-  color:rgba(255,255,255,0.65);
-}
-
-/* Suggestions */
 #suggestionsBox{
   position:absolute;
-  top:70px;
-  left:50%;
-  transform:translateX(-50%);
-  width:94%;
-  max-width:520px;
+  top:100%;
+  left:0;
+  width:100%;
+  margin-top:8px;
   background:rgba(10,10,10,0.96);
+  border:1px solid rgba(255,255,255,0.12);
   border-radius:16px;
-  border:1px solid var(--border);
-  box-shadow:var(--shadow);
+  box-shadow:0 12px 40px rgba(0,0,0,0.5);
   display:none;
   max-height:420px;
   overflow-y:auto;
@@ -108,12 +101,8 @@ body{
   display:flex;
   gap:12px;
   padding:14px;
-  border-bottom:1px solid var(--border);
+  border-bottom:1px solid rgba(255,255,255,0.1);
   cursor:pointer;
-}
-
-.suggestion-item:last-child{
-  border-bottom:none;
 }
 
 .suggestion-item:hover{
@@ -127,20 +116,16 @@ body{
   object-fit:cover;
 }
 
-.suggestion-content{
-  flex:1;
-}
-
 .suggestion-title{
   font-weight:700;
   font-size:0.95rem;
-  margin-bottom:4px;
 }
 
 .suggestion-price{
   font-size:0.9rem;
   opacity:0.85;
 }
+
 
 /* =================================================
    HERO
